@@ -1,0 +1,55 @@
+@layout('layouts.admin')
+@section('breadcrumbs')
+<div class="breadcrumbs-area clearfix">
+    <h4 class="page-title pull-left">Products</h4>
+    <ul class="breadcrumbs pull-left">
+        <li><a href="index.html">Home</a></li>
+        <li><span>Dashboard</span></li>
+    </ul>
+</div>
+@endsection
+@section('content')
+<div class="single-table">
+                                  <div class="table-responsive">
+                                      <table class="table table-hover progress-table text-center">
+                                          <thead class="text-uppercase">
+                                              <tr>
+                                                  <th scope="col">ID</th>
+                                                  <th scope="col">Title</th>
+                                                  <th scope="col">Material</th>
+                                                  <th scope="col">Quantity</th>
+                                                  <th scope="col">Size</th>
+                                                  <th scope="col">SKU</th>
+                                                  <th scope="col">Brand</th>
+                                                  <th scope="col">Created by</th>
+                                                  <th scope="col">action</th>
+                                              </tr>
+                                          </thead>
+                                          <tbody>
+                                            @each(product in allProducts)
+                                            <tr>
+                                                <th scope="row">{{product.id}}</th>
+                                                <td><a href="products/{{product.id}}">
+                                                  {{product.title}}
+                                                </a>
+                                                </td>
+                                                <td>{{product.material}}</td>
+                                                <td>{{product.qty}}</td>
+                                                <td>{{product.size}}</td>
+                                                <td>{{product.sku}}</td>
+                                                <td>{{product.brand}}</td>
+                                                <td>{{product.user}}</td>
+
+                                                <td>
+                                                    <ul class="d-flex justify-content-center">
+                                                        <li class="mr-3">
+                                                          <a href="/admin/products/{{product.id}}/edit" class="text-secondary"><i class="fa fa-edit"></i></a></li>
+                                                        <li><a href="/admin/products/{{product.id}}/delete" onclick="return confirm('DELETE {{product.title}}?')" class="text-danger"><i class="ti-trash"></i></a></li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            @endeach
+
+
+
+@endsection

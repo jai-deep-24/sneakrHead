@@ -1,0 +1,63 @@
+@layout('layouts.admin')
+@section('breadcrumbs')
+<div class="breadcrumbs-area clearfix">
+    <h4 class="page-title pull-left">Dashboard</h4>
+    <ul class="breadcrumbs pull-left">
+        <li><a href="/admin">Dashboard</a></li>
+        <li><a href='/admin/products'>All Products</a></li>
+        <li> <span>{{products.title}}</span> </li>
+    </ul>
+</div>
+@endsection
+@section('content')
+ <div class='row'>
+     <div class="col-md-9 mt-5">
+        <div class="card">
+            <div class="card-body">
+              <div class="row">
+              <div class="col-md-5" style="min-width:352px;">
+                <img style="width: 90%;height:90%;" src="{{products.img_url}}">
+                  </div>
+                  <div class="col-md-7">
+                <h2>{{products.title}}</h2>
+                <p>
+                  <span>Description:</span>
+                  {{products.description}}
+                </p>
+                <div class="row" style="padding-top:40px;">
+                    <div class="col-md-3">
+                        <h4>Qty</h4>
+                        <span>{{products.qty}}</span>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Sku</h4>
+                        <span> {{products.sku}} </span>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Material</h4>
+                        <span> {{products.material}} </span>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Brand</h4>
+                        <span> {{products.brand}}</span>
+                    </div>
+                  <div>
+              </div>
+            </div>
+          </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+      <div class="col-md-3 mt-5 ">
+         <div class="card">
+              <div class="card-body">
+                  <a class="btn btn-primary btn-lg btn-block" href="/admin/products/{{products.id}}/edit">Edit    <i class="fa fa-edit"></i></a>
+                  <a class="btn btn-danger btn-lg btn-block" href="/admin/products/{{products.id}}/delete" onclick="return confirm('Delete {{products.title}}?')" >Delete   <i class="ti-trash"> </i> </a>
+              </div>
+           </div>
+       </div>
+
+ </div>
+@endsection

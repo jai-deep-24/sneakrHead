@@ -1,0 +1,57 @@
+@layout('layouts.admin')
+@section('breadcrumbs')
+<div class="breadcrumbs-area clearfix">
+    <h4 class="page-title pull-left">Dashboard</h4>
+    <ul class="breadcrumbs pull-left">
+        <li><a href="/admin">Dashboard</a></li>
+        <li><a href='/admin/brands'>All brands</a></li>
+        <li> <span>{{brands.title}}</span> </li>
+    </ul>
+</div>
+@endsection
+@section('content')
+ <div class='row'>
+     <div class="col-md-9 mt-5">
+        <div class="card">
+            <div class="card-body">
+              <div class="row">
+              <div class="col-md-5" style="min-width:352px;">
+                <img style="width: 90%;height:90%;" src="{{brands.img_url}}">
+                  </div>
+                  <div class="col-md-7">
+                <h2>{{brands.title}}</h2>
+                <p>
+                  <span>Description:</span>
+                  {{brands.description}}
+                </p>
+                <div class="row" style="padding-top:40px;">
+                    <div class="col-md-4">
+                        <h4>Created By</h4>
+                        <span> {{brands.f_name}} {{brands.l_name}}</span>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Email Address</h4>
+                        <span>{{brands.email}}</span>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Phone Number</h4>
+                        <span>{{brands.phone_number}}</span>
+                    </div>
+            </div>
+          </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+      <div class="col-md-3 mt-5 ">
+         <div class="card">
+              <div class="card-body">
+                  <a class="btn btn-primary btn-lg btn-block" href="/admin/brands/{{brands.id}}/edit">Edit    <i class="fa fa-edit"></i></a>
+                  <a class="btn btn-danger btn-lg btn-block" href="/admin/brands/{{brands.id}}/delete" onclick="return confirm('Delete {{brands.title}}?')" >Delete   <i class="ti-trash"> </i> </a>
+              </div>
+           </div>
+       </div>
+
+ </div>
+@endsection

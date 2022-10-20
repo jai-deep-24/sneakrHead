@@ -1,0 +1,43 @@
+@layout('layouts.admin')
+@section('breadcrumbs')
+<div class="breadcrumbs-area clearfix">
+    <h4 class="page-title pull-left">Dashboard</h4>
+    <ul class="breadcrumbs pull-left">
+        <li><a href="/admin">Dashboard</a></li>
+        <li><a href='/admin/brands'>All Brands</a></li>
+        <li><span>Create New Brands</span></li>
+    </ul>
+</div>
+@endsection
+@section('content')
+ <div class='row'>
+     <div class="col-12 mt-5">
+                               <div class="card">
+                                   <div class="card-body">
+                                     <form action="/admin/brands" method="post">
+                                       {{ csrfField() }}
+                                       <div class="form-group">
+                                           <label for="example-text-input" class="col-form-label">Title</label>
+                                            <input class="form-control" type="text" id="example-search-input" name='title'>
+                                       </div>
+
+                                       <div class="form-group row">
+                                           <label for="example-text-input" class="col-form-label">Image Url</label>
+                                            <input class="form-control" type="text" id="example-search-input" name='img_url'>
+                                       </div>
+
+                                       <div class="form-group">
+                                           <label for="example-text-input" class="col-form-label">Description</label>
+                                           <textarea class="form-control" name="description" rows="8" cols="80"></textarea>
+                                       </div>
+
+                                       <div class="form-grop" style="padding:30px;">
+                                       <button type="submit" class="btn btn-rounded btn-primary mb-3 ">Submit</button>
+                                     </div>
+                                     </div>
+                                   </form>
+                                     </div>
+                                   </div>
+                               </div>
+                           </div>
+@endsection

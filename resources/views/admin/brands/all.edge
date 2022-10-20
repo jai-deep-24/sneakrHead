@@ -1,0 +1,46 @@
+@layout('layouts.admin')
+@section('breadcrumbs')
+<div class="breadcrumbs-area clearfix">
+    <h4 class="page-title pull-left">Dashboard</h4>
+    <ul class="breadcrumbs pull-left">
+        <li><span>All Brands</span></li>
+    </ul>
+</div>
+@endsection
+@section('content')
+<div class="single-table">
+                                  <div class="table-responsive">
+                                      <table class="table table-hover progress-table text-center">
+                                          <thead class="text-uppercase">
+                                              <tr>
+                                                  <th scope="col">ID</th>
+                                                  <th scope="col">Brand</th>
+                                                  <th scope="col">Created by</th>
+                                                  <th scope="col">Description</th>
+                                                  <th scope="col">action</th>
+                                              </tr>
+                                          </thead>
+                                          <tbody>
+                                            @each(brand in allBrands)
+                                            <tr>
+                                                <th scope="row">{{brand.id}}</th>
+                                                <td><a href="brands/{{brand.id}}">
+                                                  <img src="{{brand.img_url}}" style="max-width:120px; max-height:70px;min-width:120px; min-height:70px;" alt="">
+                                                </a>
+                                                </td>
+                                                <td>{{brand.f_name}}   {{brand.l_name}}</td>
+                                                <td>{{brand.description}}</td>
+
+                                                <td>
+                                                    <ul class="d-flex justify-content-center">
+                                                        <li class="mr-3">
+                                                          <a href="/admin/brands/{{brand.id}}/edit" class="text-secondary"><i class="fa fa-edit"></i></a></li>
+                                                        <li><a href="/admin/brands/{{brand.id}}/delete" onclick="return confirm('DELETE {{brand.title}}?')" class="text-danger"><i class="ti-trash"></i></a></li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            @endeach
+
+
+
+@endsection
