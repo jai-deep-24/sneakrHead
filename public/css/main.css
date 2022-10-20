@@ -1,0 +1,137 @@
+#products-show-page .details, #brands-show-page .details {
+  margin: 50px 0;
+}
+
+#orders-create-page .order-items .item-box {
+  background: white;
+  padding: 30px;
+  border-radius: 4px;
+  margin: 50px 0;
+  -webkit-box-shadow: 0px 44px 69px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 44px 69px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 44px 69px 0px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#orders-create-page .order-items .item-img {
+  background: black;
+  height: 200px;
+  width: 200px;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  margin: 0 auto;
+  position: relative;
+}
+
+#orders-create-page .order-items .item-delete {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+#orders-create-page .order-items .title {
+  text-align: center;
+  font-weight: 700;
+}
+
+#orders-create-page .order-items .quantity input {
+  text-align: center;
+  font-weight: 700;
+  width: 200px;
+  margin: 0 auto;
+}
+
+#orders-create-page  .add-item-button {
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  color: white;
+  background: green;
+  flex-direction: column;
+  cursor: pointer;
+  margin: 0 auto;
+
+}
+
+#orders-create-page  .add-item-button span {
+  font-weight: 700;
+  color: white;
+  font-size: 4rem;
+}
+
+/*=================*/
+
+#orders-create-page .popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(0, 0, 0, .8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* visibility: hidden; */
+  opacity: 0;
+  transition: all .3s ease-in-out;
+}
+
+#orders-create-page .popup.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+#orders-create-page .popup .container-box {
+  width: 400px;
+  padding: 20px;
+  background: white;
+  border-radius: 4px;
+}
+
+#orders-create-page .popup .container-box .add-btn {
+  color: white;
+  padding: 10px 20px;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+#orders-create-page .popup .container-box .cancel-btn {
+  color: white;
+  padding: 10px 20px;
+  margin: 20px 0 0;
+  cursor: pointer;
+}
+
+#orders-show-page .section {
+  margin-bottom: 50px;
+}
+
+#orders-show-page .section h2 {
+  margin-bottom: 20px;
+}
+
+#orders-show-page .section label {
+  font-size: 1.2rem;
+}
+
+#orders-show-page .section label span {
+  font-weight: 700;
+  color: black;
+}
