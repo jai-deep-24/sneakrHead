@@ -395,12 +395,18 @@
 
 /*-------------------- 2.2 Header Area -------------------*/
 
+/* Define SASS/SCSS Variables */
+$primary-color: #007BFF;
+$secondary-color: #b3aaaa;
+
+/* Header Area */
 .header-area {
     padding: 15px 30px;
     background: #fff;
     border-bottom: 1px solid #d8e3e7;
 }
 
+/* Navigation Button */
 .nav-btn {
     margin: 10px 30px 0 0;
     cursor: pointer;
@@ -410,10 +416,9 @@
     display: block;
     width: 22px;
     height: 2px;
-    background: #b3aaaa;
+    background: $secondary-color;
     margin: 4px 0;
     border-radius: 15px;
-    -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
     box-shadow: 0 0 0 4px rgba(99, 96, 96, 0.03);
 }
@@ -423,13 +428,11 @@
 }
 
 .nav-btn span:first-child {
-    -webkit-transform: rotate(45deg)translate(5px, 5px);
-            transform: rotate(45deg)translate(5px, 5px);
+    transform: rotate(45deg) translate(5px, 5px);
 }
 
 .nav-btn span:last-child {
-    -webkit-transform: rotate(-45deg)translate(3px, -3px);
-            transform: rotate(-45deg)translate(3px, -3px);
+    transform: rotate(-45deg) translate(3px, -3px);
 }
 
 .sbar_collapsed .nav-btn span {
