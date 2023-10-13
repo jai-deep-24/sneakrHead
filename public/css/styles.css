@@ -440,6 +440,7 @@ $secondary-color: #b3aaaa;
     opacity: 1;
 }
 
+/* Search Box */
 .search-box form {
     position: relative;
 }
@@ -455,14 +456,9 @@ $secondary-color: #b3aaaa;
     background: #f3eeff;
 }
 
-.search-box input::-webkit-input-placeholder {
-    color: #b1a7a7;
-}
-
-.search-box input::-moz-placeholder {
-    color: #b1a7a7;
-}
-
+/* Placeholder Text Styles */
+.search-box input::-webkit-input-placeholder,
+.search-box input::-moz-placeholder,
 .search-box input:-ms-input-placeholder {
     color: #b1a7a7;
 }
@@ -474,7 +470,6 @@ $secondary-color: #b3aaaa;
     font-size: 14px;
     color: #b1a7a7;
 }
-
 
 /* notification-area */
 
