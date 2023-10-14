@@ -16,31 +16,15 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
-Route.get('/','PageController.index')
-// ADMIN PRODUCTS
-Route.get('/admin/products', 'Admin/ProductController.index')
-Route.post("/admin/products", 'Admin/ProductController.store')
-Route.get("/admin/products/create", 'Admin/ProductController.create')
-Route.get("/admin/products/:id", 'Admin/ProductController.show')
-Route.get("/admin/products/:id/edit", 'Admin/ProductController.edit')
-Route.post("/admin/products/:id" ,'Admin/ProductController.update')
-Route.get('/admin/products/:id/delete', 'Admin/ProductController.delete')
+// start/routes.js
+const Route = use('Route')
 
-// ADMIN/BRANDS
-
-Route.get('/admin/brands', 'Admin/BrandController.index')
-Route.post("/admin/brands", 'Admin/BrandController.store')
-Route.get("/admin/brands/create", 'Admin/BrandController.create')
-Route.get("/admin/brands/:id", 'Admin/BrandController.show')
-Route.get("/admin/brands/:id/edit", 'Admin/BrandController.edit')
-Route.post("/admin/brands/:id" ,'Admin/BrandController.update')
-Route.get('/admin/brands/:id/delete', 'Admin/BrandController.delete')
-
-// admin/ORDER
-Route.get('/admin/orders', 'Admin/OrderController.index')
-Route.post("/admin/orders", 'Admin/OrderController.store')
-Route.get("/admin/orders/create", 'Admin/OrderController.create')
-Route.get("/admin/orders/:id", 'Admin/OrderController.show')
-Route.get("/admin/orders/:id/edit", 'Admin/OrderController.edit')
-Route.post("/admin/orders/:id" ,'Admin/OrderController.update')
-Route.get('/admin/orders/:id/delete', 'Admin/OrderController.delete')
+Route.group(() => {
+  Route.get('/admin/products', 'ProductController.index')
+  Route.get('/admin/products/create', 'ProductController.create')
+  Route.post('/admin/products', 'ProductController.store')
+  Route.get('/admin/products/:id', 'ProductController.show')
+  Route.get('/admin/products/:id/edit', 'ProductController.edit')
+  Route.put('/admin/products/:id', 'ProductController.update')
+  Route.delete('/admin/products/:id', 'ProductController.delete')
+}).prefix('admin')
