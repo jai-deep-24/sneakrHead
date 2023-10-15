@@ -171,29 +171,26 @@ var types = [{
     }]
 }];
 
+//Optimized the code
 function generateChartData() {
-    var chartData = [];
-    for (var i = 0; i < types.length; i++) {
-        if (i == selected) {
-            for (var x = 0; x < types[i].subs.length; x++) {
-                chartData.push({
-                    type: types[i].subs[x].type,
-                    percent: types[i].subs[x].percent,
-                    color: types[i].color,
-                    pulled: true
-                });
-            }
-        } else {
-            chartData.push({
-                type: types[i].type,
-                percent: types[i].percent,
-                color: types[i].color,
-                id: i
-            });
+    return types.reduce((chartData, type, i) => {
+        if (i === selected) {
+            return chartData.concat(type.subs.map(sub => ({
+                type: sub.type,
+                percent: sub.percent,
+                color: type.color,
+                pulled: true
+            })));
         }
-    }
-    return chartData;
+        return chartData.concat({
+            type: type.type,
+            percent: type.percent,
+            color: type.color,
+            id: i
+        });
+    }, []);
 }
+
 
 if ($('#ampiechart3').length) {
     AmCharts.makeChart("ampiechart3", {
