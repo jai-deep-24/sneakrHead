@@ -396,8 +396,8 @@
 /*-------------------- 2.2 Header Area -------------------*/
 
 /* Define SASS/SCSS Variables */
-$primary-color: #007BFF;
-$secondary-color: #b3aaaa;
+primary-color: #007BFF;
+secondary-color: #b3aaaa;
 
 /* Header Area */
 .header-area {
@@ -816,14 +816,14 @@ ul.breadcrumbs {
 }
 
 .single-report .icon {
-    font-size: 32px;
+    font-size: 30px;
     color: #fff;
     background: var(--primary-color);
     height: 95px;
-    width: 100px;
+    width: 110px;
     text-align: right;
     padding-top: 40px;
-    padding-right: 22px;
+    padding-right: 26px;
     border-radius: 50%;
     position: absolute;
     left: -39px;
@@ -846,13 +846,13 @@ ul.breadcrumbs {
 
 .single-report p {
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 710;
     color: #565656;
     background: #ececec;
     letter-spacing: 0;
-    padding: 0 9px;
+    padding: 0 10px;
     height: 20px;
-    line-height: 20px;
+    line-height: 22px;
 }
 
 .single-report h2 {
