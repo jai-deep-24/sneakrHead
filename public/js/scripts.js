@@ -1,4 +1,3 @@
-
 (function($) {
     "use strict";
 
@@ -211,11 +210,12 @@
         var fsDocButton = document.getElementById('full-view');
         var fsExitDocButton = document.getElementById('full-view-exit');
 
-        fsDocButton.addEventListener('click', function(e) {
+        fsDocButton.addEventListener('click', (e) => {
             e.preventDefault();
             requestFullscreen(document.documentElement);
             $('body').addClass('expanded');
         });
+
 
         fsExitDocButton.addEventListener('click', function(e) {
             e.preventDefault();
