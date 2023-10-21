@@ -194,7 +194,7 @@
             }
         };
 
-        var exitFullscreen = function() {
+        var exitFullscreen = (e) => {
             if (document.exitFullscreen) {
                 document.exitFullscreen();
             } else if (document.webkitExitFullscreen) {
