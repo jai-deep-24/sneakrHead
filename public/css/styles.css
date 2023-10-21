@@ -410,18 +410,27 @@ $secondary-color: #b3aaaa;
 .nav-btn {
     margin: 10px 30px 0 0;
     cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
 }
 
 .nav-btn span {
     display: block;
-    width: 22px;
-    height: 2px;
-    background: $secondary-color;
-    margin: 4px 0;
-    border-radius: 15px;
+    width: 24px; /* Increased the width for better visibility */
+    height: 4px; /* Increased the height for a more prominent look */
+    background: $secondary-color; /* Use your desired secondary color */
+    margin: 6px 0; /* Adjusted the margin for better spacing */
+    border-radius: 5px; /* Slightly rounded corners for a smoother look */
     transition: all 0.3s ease 0s;
     box-shadow: 0 0 0 4px rgba(99, 96, 96, 0.03);
 }
+
+.nav-btn:hover span {
+    background: $hover-color; /* Change color on hover (replace $hover-color with your desired color) */
+    transform: scale(1.1); /* Add a slight scale effect on hover for interaction */
+}
+
 
 .nav-btn span:nth-child(2) {
     opacity: 0;
