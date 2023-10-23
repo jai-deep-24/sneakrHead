@@ -32,13 +32,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 30px;
-  width: 30px;
+  height: 25px; /* Slightly reduce the height */
+  width: 25px; /* Slightly reduce the width */
   border-radius: 50%;
   color: white;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 1.4rem; /* Slightly reduce the font size */
 }
+
 
 #orders-create-page .order-items .title {
   text-align: center;
@@ -88,10 +89,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* visibility: hidden; */
-  opacity: 0;
-  transition: all .3s ease-in-out;
+  opacity: 0; /* Set initial opacity to 0 */
+  transition: opacity 0.3s ease-in-out; /* Add opacity transition for a smooth fade-in effect */
 }
+
 
 #orders-create-page .popup.active {
   visibility: visible;
