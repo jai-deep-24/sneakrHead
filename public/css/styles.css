@@ -670,15 +670,15 @@ secondary-color: #b3aaaa;
     height: 36px;
     background: var(--primary-color);
     -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 .page-title {
-    font-size: 24px;
-    font-weight: 300;
-    color: #313b3d;
-    letter-spacing: 0;
-    margin-right: 30px;
+    font-size: 28px; /* Increased font size */
+    font-weight: 400; /* Increased font weight */
+    color: #0073e6; /* Changed text color to blue (#0073e6) */
+    letter-spacing: 1px; /* Added letter spacing */
+    margin-right: 20px; /* Reduced right margin */
 }
 
 ul.breadcrumbs {
