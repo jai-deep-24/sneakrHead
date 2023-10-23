@@ -52,22 +52,22 @@
   margin: 0 auto;
 }
 
-#orders-create-page  .add-item-button {
+#orders-create-page .add-item-button {
   text-align: center;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-weight: 600; /* Slightly reduced the font weight */
+  text-transform: capitalize; /* Changed to capitalize text */
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
-  height: 200px;
-  color: white;
-  background: green;
-  flex-direction: column;
+  width: 180px; /* Slightly reduced the width */
+  height: 180px; /* Slightly reduced the height */
+  color: #fff; /* Changed to a standard CSS color value for white */
+  background: #4CAF50; /* Changed to a standard CSS color value for green */
+  flex-direction: row; /* Changed to a row direction */
   cursor: pointer;
   margin: 0 auto;
-
 }
+
 
 #orders-create-page  .add-item-button span {
   font-weight: 700;
