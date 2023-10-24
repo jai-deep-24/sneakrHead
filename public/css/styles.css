@@ -97,6 +97,7 @@
     padding: 0 30px 50px;
 }
 
+
 /*------------------------- END Core Css -------------------*/
 
 
@@ -104,16 +105,43 @@
 
 .sidebar-menu {
     position: fixed;
-    left: 0;
     top: 0;
+    left: 0;
     z-index: 99;
-    height: 100vh;
     width: 280px;
-    overflow: hidden;
-    background: #303641;
-    box-shadow: 2px 0 32px rgba(0, 0, 0, 0.05);
-    -webkit-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
+    height: 100%;
+    overflow-y: auto;
+    /* Allowing vertical scrolling if content overflows */
+    background: #34495E;
+    /* A more vibrant color */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    /* Subtle box shadow */
+    transition: transform 0.3s ease;
+    /* Using transform for smoother transitions */
+}
+
+
+/* Optional: Add a hover effect to make it more interactive */
+
+.sidebar-menu:hover {
+    transform: translateX(10px);
+    /* Slight movement on hover */
+}
+
+
+/* Add styles for the content within the sidebar */
+
+.sidebar-menu a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #ECF0F1;
+    /* Text color */
+}
+
+.sidebar-menu a:hover {
+    background: #2C3E50;
+    /* Background color on hover */
 }
 
 .sbar_collapsed .sidebar-menu {
@@ -143,17 +171,20 @@
     background: #303641;
     border-bottom: 1px solid #343e50;
 }
-.sidebar-menu .logo{
+
+.sidebar-menu .logo {
     text-align: center;
 }
+
 .logo a {
     display: inline-block;
     max-width: 120px;
 }
 
-.metismenu >li >a {
+.metismenu>li>a {
     padding-left: 32px!important;
 }
+
 .metismenu li a {
     position: relative;
     display: block;
@@ -206,8 +237,8 @@
     padding-left: 37px;
 }
 
-.metismenu >li:hover>a,
-.metismenu >li.active>a {
+.metismenu>li:hover>a,
+.metismenu>li.active>a {
     color: #fff;
     background: #343942;
 }
@@ -225,6 +256,7 @@
 .metismenu li li a:after {
     top: 6px;
 }
+
 
 /*-------------------- END Sidebar Menu -------------------*/
 
@@ -255,7 +287,7 @@
 
 .mainheader-area .notification-area {
     -webkit-transform: translateY(-11px);
-            transform: translateY(-11px);
+    transform: translateY(-11px);
 }
 
 .mainheader-area {
@@ -342,6 +374,7 @@
     width: 100%;
 }
 
+
 /* mobile menu */
 
 .slicknav_menu {
@@ -390,23 +423,29 @@
     float: right;
 }
 
+
 /*-------------------- END Horizontal Menu -------------------*/
 
 
 /*-------------------- 2.2 Header Area -------------------*/
 
+
 /* Define SASS/SCSS Variables */
+
 primary-color: #007BFF;
 secondary-color: #b3aaaa;
 
 /* Header Area */
+
 .header-area {
     padding: 15px 30px;
     background: #fff;
     border-bottom: 1px solid #d8e3e7;
 }
 
+
 /* Navigation Button */
+
 .nav-btn {
     margin: 10px 30px 0 0;
     cursor: pointer;
@@ -417,20 +456,26 @@ secondary-color: #b3aaaa;
 
 .nav-btn span {
     display: block;
-    width: 24px; /* Increased the width for better visibility */
-    height: 4px; /* Increased the height for a more prominent look */
-    background: $secondary-color; /* Use your desired secondary color */
-    margin: 6px 0; /* Adjusted the margin for better spacing */
-    border-radius: 5px; /* Slightly rounded corners for a smoother look */
+    width: 24px;
+    /* Increased the width for better visibility */
+    height: 4px;
+    /* Increased the height for a more prominent look */
+    background: $secondary-color;
+    /* Use your desired secondary color */
+    margin: 6px 0;
+    /* Adjusted the margin for better spacing */
+    border-radius: 5px;
+    /* Slightly rounded corners for a smoother look */
     transition: all 0.3s ease 0s;
     box-shadow: 0 0 0 4px rgba(99, 96, 96, 0.03);
 }
 
 .nav-btn:hover span {
-    background: $hover-color; /* Change color on hover (replace $hover-color with your desired color) */
-    transform: scale(1.1); /* Add a slight scale effect on hover for interaction */
+    background: $hover-color;
+    /* Change color on hover (replace $hover-color with your desired color) */
+    transform: scale(1.1);
+    /* Add a slight scale effect on hover for interaction */
 }
-
 
 .nav-btn span:nth-child(2) {
     opacity: 0;
@@ -449,7 +494,9 @@ secondary-color: #b3aaaa;
     opacity: 1;
 }
 
+
 /* Search Box */
+
 .search-box form {
     position: relative;
 }
@@ -465,7 +512,9 @@ secondary-color: #b3aaaa;
     background: #f3eeff;
 }
 
+
 /* Placeholder Text Styles */
+
 .search-box input::-webkit-input-placeholder,
 .search-box input::-moz-placeholder,
 .search-box input:-ms-input-placeholder {
@@ -480,13 +529,14 @@ secondary-color: #b3aaaa;
     color: #b1a7a7;
 }
 
+
 /* notification-area */
 
 .notification-area {
     -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     position: relative;
     z-index: 1;
 }
@@ -496,9 +546,9 @@ secondary-color: #b3aaaa;
     margin-left: 20px;
     cursor: pointer;
     -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .notification-area li.settings-btn.active i {
@@ -613,6 +663,7 @@ secondary-color: #b3aaaa;
     font-weight: 300;
 }
 
+
 /* notify envelope */
 
 .expanded .notification-area li#full-view-exit {
@@ -651,7 +702,9 @@ secondary-color: #b3aaaa;
     margin-top: 4px;
 }
 
+
 /*-------------------- END Header Area -------------------*/
+
 
 /*-------------------- 2.3 Page Title Area -------------------*/
 
@@ -674,11 +727,16 @@ secondary-color: #b3aaaa;
 }
 
 .page-title {
-    font-size: 28px; /* Increased font size */
-    font-weight: 400; /* Increased font weight */
-    color: #0073e6; /* Changed text color to blue (#0073e6) */
-    letter-spacing: 1px; /* Added letter spacing */
-    margin-right: 20px; /* Reduced right margin */
+    font-size: 28px;
+    /* Increased font size */
+    font-weight: 400;
+    /* Increased font weight */
+    color: #0073e6;
+    /* Changed text color to blue (#0073e6) */
+    letter-spacing: 1px;
+    /* Added letter spacing */
+    margin-right: 20px;
+    /* Reduced right margin */
 }
 
 ul.breadcrumbs {
@@ -720,10 +778,10 @@ ul.breadcrumbs {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     background: -webkit-linear-gradient(left, #8914fe 0%, #8063f5 100%);
     background: linear-gradient(to right, #8914fe 0%, #8063f5 100%);
     padding: 17px 38px;
@@ -744,9 +802,9 @@ ul.breadcrumbs {
     letter-spacing: 0;
     cursor: pointer;
     -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .user-name i {
@@ -771,7 +829,7 @@ ul.breadcrumbs {
     background: #fff;
     border: none;
     -webkit-transform: none!important;
-            transform: none!important;
+    transform: none!important;
     top: 130%!important;
     right: 30px!important;
     left: auto!important;
@@ -808,6 +866,7 @@ ul.breadcrumbs {
     background: #f8f9fa;
     color: #2942fa;
 }
+
 
 /*-------------------- END Page Title Area -------------------*/
 
@@ -882,6 +941,7 @@ ul.breadcrumbs {
     display: none;
 }
 
+
 /*-------------------- END Fact Area ------------------- */
 
 
@@ -935,13 +995,13 @@ table.dbkit-table tr {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    flex-wrap: nowrap;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     height: 71px;
     border: 1px solid transparent;
     padding: 0 30px;
@@ -987,6 +1047,7 @@ table.dbkit-table tr td {
 .sell img {
     margin-left: 10px;
 }
+
 
 /*-------------------- END Market value ------------------- */
 
@@ -1051,6 +1112,7 @@ table.dbkit-table tr td {
     color: #ff0e0e;
 }
 
+
 /*-------------------- END Live Crypto Price ------------------- */
 
 
@@ -1074,6 +1136,7 @@ table.dbkit-table tr td {
     color: #565656;
 }
 
+
 /*-------------------- END Trading History ------------------- */
 
 
@@ -1085,20 +1148,20 @@ table.dbkit-table tr td {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 
 .lts-thumb {
     -ms-flex-preferred-size: calc(40% - 10px);
-        flex-basis: calc(40% - 10px);
+    flex-basis: calc(40% - 10px);
 }
 
 .lts-content {
     -ms-flex-preferred-size: calc(60% - 10px);
-        flex-basis: calc(60% - 10px);
+    flex-basis: calc(60% - 10px);
 }
 
 .lts-content span {
@@ -1199,6 +1262,7 @@ table.dbkit-table tr td {
     margin-bottom: 0;
 }
 
+
 /*-------------------- END Letest Post ------------------- */
 
 
@@ -1214,7 +1278,6 @@ table.dbkit-table tr td {
 #visitor_graph {
     height: 400px;
 }
-
 
 
 /* Todays Order List */
@@ -1250,6 +1313,7 @@ table.dbkit-table tr td {
 .pagination_area ul li a i {
     font-size: 14px;
 }
+
 
 /* team member area */
 
@@ -1303,6 +1367,7 @@ table.dbkit-table tr td {
     margin: 15px 0;
 }
 
+
 /*-------------------- END Dashboard Two ------------------- */
 
 
@@ -1343,7 +1408,7 @@ table.dbkit-table tr td {
     margin-right: 20px;
     vertical-align: middle;
     -webkit-transform: translateY(-5px);
-            transform: translateY(-5px);
+    transform: translateY(-5px);
     display: inline-block;
 }
 
@@ -1358,11 +1423,13 @@ table.dbkit-table tr td {
     max-width: 200px;
 }
 
+
 /* socialads */
 
 .highcharts-credits {
     display: none;
 }
+
 
 /* user-statistics */
 
@@ -1370,11 +1437,13 @@ table.dbkit-table tr td {
     height: 350px;
 }
 
+
 /* salesanalytic */
 
 #salesanalytic {
     height: 500px;
 }
+
 
 /* timeline */
 
@@ -1585,6 +1654,7 @@ table.dbkit-table tr td {
     background: #f7cb3f;
 }
 
+
 /*-------------------- END Dashboard Three ------------------- */
 
 
@@ -1603,6 +1673,7 @@ table.dbkit-table tr td {
     display: none!important;
 }
 
+
 /*-------------------- END Bar Chart ------------------- */
 
 
@@ -1615,7 +1686,6 @@ table.dbkit-table tr td {
 #amlinechart5 {
     height: 400px;
 }
-
 
 
 /*-------------------- END Line Chart ------------------- */
@@ -1633,7 +1703,9 @@ table.dbkit-table tr td {
     width: 100%;
 }
 
+
 /*-------------------- END Pie Chart ------------------- */
+
 
 /*-------------------- 8. Accroding ------------------- */
 
@@ -1662,23 +1734,33 @@ table.dbkit-table tr td {
 }
 
 .card-body {
-    padding: 20px; /* Increased padding for more spacing */
-    border: 1px solid #ccc; /* Softer border color */
-    background-color: #f9f9f9; /* Light background color */
-    font-size: 16px; /* Slightly larger font size */
-    letter-spacing: 0.5px; /* Slight letter spacing for readability */
-    color: #333; /* Darker text color for better contrast */
-    line-height: 1.5; /* Improved line height for better readability */
+    padding: 20px;
+    /* Increased padding for more spacing */
+    border: 1px solid #ccc;
+    /* Softer border color */
+    background-color: #f9f9f9;
+    /* Light background color */
+    font-size: 16px;
+    /* Slightly larger font size */
+    letter-spacing: 0.5px;
+    /* Slight letter spacing for readability */
+    color: #333;
+    /* Darker text color for better contrast */
+    line-height: 1.5;
+    /* Improved line height for better readability */
     font-weight: 400;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle box shadow for a lifted effect */
-    transition: all 0.3s ease; /* Smooth transitions on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle box shadow for a lifted effect */
+    transition: all 0.3s ease;
+    /* Smooth transitions on hover */
 }
 
 .card-body:hover {
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhanced box shadow on hover */
-    transform: translateY(-4px); /* Slight lift on hover for an interactive effect */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    /* Enhanced box shadow on hover */
+    transform: translateY(-4px);
+    /* Slight lift on hover for an interactive effect */
 }
-
 
 .according .card-header a {
     position: relative;
@@ -1696,7 +1778,6 @@ table.dbkit-table tr td {
     color: #444;
     font-size: 26px;
 }
-
 
 
 /* accordion-3 */
@@ -1723,6 +1804,7 @@ table.dbkit-table tr td {
 .gradiant-bg .card-header a:before {
     color: #fff;
 }
+
 
 /*-------------------- END Accroding ------------------- */
 
@@ -1777,6 +1859,7 @@ table.dbkit-table tr td {
     color: #d6a20c;
 }
 
+
 /* additional content */
 
 .alert-heading {
@@ -1793,10 +1876,12 @@ table.dbkit-table tr td {
     font-size: 13px;
 }
 
+
 /*-------------------- END Alert------------------- */
 
 
 /*-------------------- 10. Badge------------------- */
+
 
 /*Used Animation on the Button From Left to Right
 The Animation on button(btn) Is Work By Hover Effect */
@@ -1864,6 +1949,7 @@ The Animation on button(btn) Is Work By Hover Effect */
     line-height: 19px;
 }
 
+
 /*-------------------- END Badge------------------- */
 
 
@@ -1877,7 +1963,9 @@ The Animation on button(btn) Is Work By Hover Effect */
     border-radius: 50px;
 }
 
+
 /*-------------------- END Button ------------------- */
+
 
 /*-------------------- 12. Cards ------------------- */
 
@@ -1895,6 +1983,7 @@ p.card-text {
     margin-bottom: 23px;
 }
 
+
 /*-------------------- END Cards ------------------- */
 
 
@@ -1907,6 +1996,7 @@ p.card-text {
 .dropdown-item {
     font-size: 14px;
 }
+
 
 /*-------------------- END Dropdown Button ------------------- */
 
@@ -1937,6 +2027,7 @@ p.card-text {
     max-width: 100%;
 }
 
+
 /*-------------------- END Modal ------------------- */
 
 
@@ -1949,6 +2040,7 @@ p.card-text {
 .pagination li a {
     font-family: 'lato', sans-serif;
 }
+
 
 /*-------------------- END Pagination ------------------- */
 
@@ -2034,6 +2126,7 @@ label {
     margin-top: 2px;
 }
 
+
 /*-------------------- END Form ------------------- */
 
 
@@ -2058,7 +2151,6 @@ label {
 }
 
 
-
 /* icon-container */
 
 .icon-section {
@@ -2066,13 +2158,13 @@ label {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .icon-container {
     cursor: pointer;
     -ms-flex-preferred-size: calc(100% * (1/4));
-        flex-basis: calc(100% * (1/4));
+    flex-basis: calc(100% * (1/4));
 }
 
 .icon-container [class^="ti-"] {
@@ -2085,9 +2177,9 @@ label {
 
 .icon-container:hover [class^="ti-"] {
     -webkit-transform: scale(2);
-            transform: scale(2);
+    transform: scale(2);
     -webkit-transform-origin: left center;
-            transform-origin: left center;
+    transform-origin: left center;
 }
 
 .icon-container span.icon-name {
@@ -2101,12 +2193,13 @@ label {
 
 .icon-container:hover span.icon-name {
     -webkit-transform: translateX(10px);
-            transform: translateX(10px);
+    transform: translateX(10px);
 }
 
 .icon-container:hover span {
     color: #007BFF;
 }
+
 
 /*-------------------- END Icons ------------------- */
 
@@ -2144,6 +2237,7 @@ table tr td [class^="ti-"] {
     vertical-align: middle;
 }
 
+
 /*-------------------- END Table Basic ------------------- */
 
 
@@ -2153,6 +2247,7 @@ div.dataTables_wrapper div.dataTables_length select {
     width: 76px;
     margin: 0 10px;
 }
+
 
 /* datatable-primary */
 
@@ -2207,7 +2302,6 @@ table.dataTable thead td {
 }
 
 
-
 /* datatable-dark */
 
 .datatable-dark thead {
@@ -2240,6 +2334,7 @@ table.dataTable thead td {
     border-color: #999;
 }
 
+
 /*-------------------- END Datatable ------------------- */
 
 
@@ -2258,7 +2353,9 @@ table.dataTable thead td {
     height: 600px;
 }
 
+
 /*-------------------- END Map Start ------------------- */
+
 
 /*-------------------- 22. Invoice ------------------- */
 
@@ -2341,6 +2438,7 @@ table.dataTable thead td {
 .invoice-buttons a:hover {
     background: #574494;
 }
+
 
 /*-------------------- END Invoice ------------------- */
 
@@ -2439,7 +2537,11 @@ table.dataTable thead td {
     font-size: 16px;
 }
 
-.form-gp.has-error, .form-gp.has-error label, .form-gp.has-error input, .form-gp.has-error input::placeholder, .form-gp.has-error i {
+.form-gp.has-error,
+.form-gp.has-error label,
+.form-gp.has-error input,
+.form-gp.has-error input::placeholder,
+.form-gp.has-error i {
     color: var(--red);
 }
 
@@ -2522,6 +2624,7 @@ table.dataTable thead td {
     margin-left: 5px;
 }
 
+
 /* login-s2 */
 
 .login-s2 {
@@ -2555,6 +2658,7 @@ table.dataTable thead td {
     color: #444;
 }
 
+
 /* login-s3 */
 
 .login-bg {
@@ -2576,7 +2680,6 @@ table.dataTable thead td {
 }
 
 
-
 /* register 4 page */
 
 .login-box-s2 {
@@ -2594,6 +2697,7 @@ table.dataTable thead td {
     width: 100%;
     max-width: 500px;
 }
+
 
 /*-------------------- END Login ------------------- */
 
@@ -2656,6 +2760,7 @@ table.dataTable thead td {
     box-shadow: 0 3px 25px rgba(27, 27, 27, 0.38);
 }
 
+
 /*-------------------- END Pricing ------------------- */
 
 
@@ -2702,6 +2807,7 @@ table.dataTable thead td {
     border-radius: 3px;
 }
 
+
 /*-------------------- END 404 Page ------------------- */
 
 
@@ -2740,7 +2846,7 @@ table.dataTable thead td {
 
 .offset-close:hover {
     -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
 .offset-menu-tab {
@@ -2848,7 +2954,7 @@ table.dataTable thead td {
 .s-swtich input:checked+label:after {
     left: calc(100% - 5px);
     -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(-100%);
 }
 
 .s-swtich label:active:after {
@@ -2869,13 +2975,13 @@ table.dataTable thead td {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    flex-wrap: nowrap;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     margin-bottom: 20px;
 }
 
@@ -2883,5 +2989,6 @@ table.dataTable thead td {
     font-size: 16px;
     color: #555;
 }
+
 
 /*-------------------- END Offset Sidebar ------------------- */

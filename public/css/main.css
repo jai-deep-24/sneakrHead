@@ -1,138 +1,154 @@
-#products-show-page .details, #brands-show-page .details {
-  margin: 50px 0;
+#products-show-page .details,
+#brands-show-page .details {
+    margin: 50px 0;
 }
 
 #orders-create-page .order-items .item-box {
-  background: white;
-  padding: 30px;
-  border-radius: 4px;
-  margin: 50px 0;
-  -webkit-box-shadow: 0px 44px 69px 0px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0px 44px 69px 0px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 44px 69px 0px rgba(0, 0, 0, 0.1);
-  text-align: center;
+    background: #f7f7f7;
+    /* Change the background color */
+    padding: 20px;
+    /* Reduced padding for a more compact look */
+    border-radius: 8px;
+    /* Increased border radius for a smoother appearance */
+    margin: 30px 0;
+    /* Reduced margin for tighter spacing */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    /* Simplified and improved box shadow */
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    /* Add a transition for interactivity */
 }
 
 #orders-create-page .order-items .item-img {
-  background: black;
-  height: 200px;
-  width: 200px;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  background-size: contain !important;
-  margin: 0 auto;
-  position: relative;
+    background: black;
+    height: 200px;
+    width: 200px;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    margin: 0 auto;
+    position: relative;
 }
 
 #orders-create-page .order-items .item-delete {
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: red;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 25px; /* Slightly reduce the height */
-  width: 25px; /* Slightly reduce the width */
-  border-radius: 50%;
-  color: white;
-  cursor: pointer;
-  font-size: 1.4rem; /* Slightly reduce the font size */
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    /* Slightly reduce the height */
+    width: 25px;
+    /* Slightly reduce the width */
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    font-size: 1.4rem;
+    /* Slightly reduce the font size */
 }
 
-
 #orders-create-page .order-items .title {
-  text-align: center;
-  font-weight: 700;
+    text-align: center;
+    font-weight: 700;
 }
 
 #orders-create-page .order-items .quantity input {
-  text-align: center;
-  font-weight: 700;
-  width: 200px;
-  margin: 0 auto;
+    text-align: center;
+    font-weight: 700;
+    width: 200px;
+    margin: 0 auto;
 }
 
 #orders-create-page .add-item-button {
-  text-align: center;
-  font-weight: 600; /* Slightly reduced the font weight */
-  text-transform: capitalize; /* Changed to capitalize text */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 180px; /* Slightly reduced the width */
-  height: 180px; /* Slightly reduced the height */
-  color: #fff; /* Changed to a standard CSS color value for white */
-  background: #4CAF50; /* Changed to a standard CSS color value for green */
-  flex-direction: row; /* Changed to a row direction */
-  cursor: pointer;
-  margin: 0 auto;
+    text-align: center;
+    font-weight: 600;
+    /* Slightly reduced the font weight */
+    text-transform: capitalize;
+    /* Changed to capitalize text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    /* Slightly reduced the width */
+    height: 180px;
+    /* Slightly reduced the height */
+    color: #fff;
+    /* Changed to a standard CSS color value for white */
+    background: #4CAF50;
+    /* Changed to a standard CSS color value for green */
+    flex-direction: row;
+    /* Changed to a row direction */
+    cursor: pointer;
+    margin: 0 auto;
 }
 
-
-#orders-create-page  .add-item-button span {
-  font-weight: 700;
-  color: white;
-  font-size: 4rem;
+#orders-create-page .add-item-button span {
+    font-weight: 700;
+    color: white;
+    font-size: 4rem;
 }
+
 
 /*=================*/
 
 #orders-create-page .popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-  z-index: 1000;
-  background: rgba(0, 0, 0, .8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0; /* Set initial opacity to 0 */
-  transition: opacity 0.3s ease-in-out; /* Add opacity transition for a smooth fade-in effect */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    /* Set initial opacity to 0 */
+    transition: opacity 0.3s ease-in-out;
+    /* Add opacity transition for a smooth fade-in effect */
 }
 
-
 #orders-create-page .popup.active {
-  visibility: visible;
-  opacity: 1;
+    visibility: visible;
+    opacity: 1;
 }
 
 #orders-create-page .popup .container-box {
-  width: 400px;
-  padding: 20px;
-  background: white;
-  border-radius: 4px;
+    width: 400px;
+    padding: 20px;
+    background: white;
+    border-radius: 4px;
 }
 
 #orders-create-page .popup .container-box .add-btn {
-  color: white;
-  padding: 10px 20px;
-  margin: 20px 0;
-  cursor: pointer;
+    color: white;
+    padding: 10px 20px;
+    margin: 20px 0;
+    cursor: pointer;
 }
 
 #orders-create-page .popup .container-box .cancel-btn {
-  color: white;
-  padding: 10px 20px;
-  margin: 20px 0 0;
-  cursor: pointer;
+    color: white;
+    padding: 10px 20px;
+    margin: 20px 0 0;
+    cursor: pointer;
 }
 
 #orders-show-page .section {
-  margin-bottom: 50px;
+    margin-bottom: 50px;
 }
 
 #orders-show-page .section h2 {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 #orders-show-page .section label {
-  font-size: 1.2rem;
+    font-size: 1.2rem;
 }
 
 #orders-show-page .section label span {
-  font-weight: 700;
-  color: black;
+    font-weight: 700;
+    color: black;
 }
