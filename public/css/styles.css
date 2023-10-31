@@ -796,10 +796,10 @@ ul.breadcrumbs {
 }
 
 .user-name {
-    font-size: 17px;
-    font-weight: 500;
-    color: #fff;
-    letter-spacing: 0;
+    font-size: 16px;
+    font-weight: 550;
+    color: #fadada;
+    letter-spacing: 1;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
